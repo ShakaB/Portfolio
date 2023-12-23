@@ -10,7 +10,7 @@ from PIL import Image
 def resume():
     # --- PATH SETTINGS ---
     current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
-    #css_file = current_dir / "main.css"
+    css_file = current_dir / "main.css"
     resume_file = current_dir / "resumejb.pdf"
     profile_pic = current_dir / "resumepic.png"
 
@@ -33,10 +33,10 @@ def resume():
 
     
     # --- LOAD CSS, PDF & PROFILE PIC ---
-    #with open(css_file) as f:
-        #st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
-    #with open(resume_file, "rb") as pdf_file:
-        #PDFbyte = pdf_file.read()
+    with open(css_file) as f:
+        st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
+    with open(resume_file, "rb") as pdf_file:
+        PDFbyte = pdf_file.read()
     profile_pic = Image.open(profile_pic)
 
     # --- HERO SECTION ---
