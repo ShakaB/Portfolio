@@ -10,9 +10,9 @@ from PIL import Image
 def resume():
     # --- PATH SETTINGS ---
     current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
-    css_file = "main.css"
-    resume_file = "resumejb.pdf"
-    profile_pic = "resumepic.png"
+    css_file = current_dir / "main.css"
+    resume_file = current_dir / "resumejb.pdf"
+    profile_pic = current_dir / "resumepic.png"
 
     # --- GENERAL SETTINGS ---
     
