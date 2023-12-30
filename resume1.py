@@ -14,15 +14,16 @@ def resume():
     # --- GENERAL SETTINGS ---
     
     DESCRIPTION = """
-    Aspiring Quantitative Analyst pursuing a degree in Data Science.
+    Aspiring Quantitative Developer pursuing a degree in Data Science.
     """
     EMAIL = "justinfborneo@gmail.com"
     SOCIAL_MEDIA = {
         "LinkedIn": "https://www.linkedin.com/in/justin-borneo-035ba1120/",
+    
         
     }
     PROJECTS = {
-        "🏆 Sales Dashboard - Comparing sales across three stores": "https://youtu.be/Sb0A9i6d320",
+        "🏆 Tata Consultancy Services (TCS), Data Visualization: Empowering Business with Effective Insights, The Forage" : "Collaborated in a team of 4 to perform EDA on Sales data to anticipate the needs of C-level executives using Python. Generated dashboards using Python and Tableau; helping C-level executives to reduce costs and increase profitability. Created and delivered a presentation to TCS data analytics member and made recommendations based on my findings.",
         "🏆 Income and Expense Tracker - Web app with NoSQL database": "https://youtu.be/3egaMfE9388",
         "🏆 Desktop Application - Excel2CSV converter with user settings & menubar": "https://youtu.be/LzCfNanQ_9c",
         "🏆 MyToolBelt - Custom MS Excel add-in to combine Python & Excel": "https://pythonandvba.com/mytoolbelt/",
@@ -37,6 +38,7 @@ def resume():
     profile_pic = Image.open(profile_pic)
 
     # --- HERO SECTION ---
+    st.write('Please Click Arrow on the Left To View Projects')
     st.markdown(
     """
     <h1 style='text-align: center;'>Justin Borneo</h1>
@@ -61,6 +63,7 @@ def resume():
         cols = st.columns(len(SOCIAL_MEDIA))
         for index, (platform, link) in enumerate(SOCIAL_MEDIA.items()):
             cols[index].write(f":briefcase: [{platform}]({link})")
+        st.write('justinfborneo@gmail.com')
     # --- SOCIAL LINKS ---
     
     # --- EXPERIENCE & QUALIFICATIONS ---
@@ -68,10 +71,10 @@ def resume():
     st.subheader("Experience & Qulifications")
     st.write(
     """
-    - ✔️ Strong hands on experience and knowledge in Python and Excel
+    - ✔️ Knowledge of Algorithmic Trading Techinques and Platforms
+    - ✔️ Strong hands on experience and knowledge in Python
     - ✔️ Good understanding of statistical principles and their respective applications
     - ✔️ Excellent team-player and displaying strong sense of initiative on tasks
-    - ✔️ Knowledge of Algorithmic Trading Techinques and Platforms
     """
 )
 
@@ -81,10 +84,11 @@ def resume():
     st.subheader("Hard Skills")
     st.write(
         """
-    - 👩‍💻 Programming: Python (Scikit-learn, Pandas), SQL
+    - 👩‍💻 Programming: Python (Scikit-learn, Pandas, NumPy, yfinance, Quantstats), SQL
     - 📊 Data Visulization: PowerBi, Matplotlib, Plotly
-    - 📚 Modeling: Logistic regression, Linear regression, Decision trees
-    - 🗄️ Databases: Postgres, MongoDB, MySQL, MindsDB
+    - 📚 Modeling: Logistic regression, Linear regression, Decision trees, LSTM
+    - 🗄️ Databases: PostgreSQL, MySQL, Couchbase Server, Docker Desktop, Kafka, MindsDB
+    - :sports_medal:  Certifications: Executive Programme in Algorithmic Trading (EPAT) QuantInsti (December 2023)
     """
 )
 
@@ -96,7 +100,7 @@ def resume():
 
 # --- JOB 1
     st.write("🚧", "**Pipeline Manager | Reverse Mortgage Funding LLC**")
-    st.write("09/2019 - Nov 2022")
+    st.write("Sept 2019 – Nov 2022")
     st.write(
         """
     - ► Conducted rigorous data analysis of credit, income, assets, and disclosures for loan applications, resulting in an increase in accurate risk assessments and informed decisions on loan approvals.
@@ -106,37 +110,29 @@ def resume():
 
 # --- JOB 2
     st.write('\n')
-    st.write("🚧", "**Data Analyst | Liberty Mutual Insurance**")
-    st.write("01/2018 - 02/2022")
+    st.write("🚧", "**Loan Processor | Sharestates**")
+    st.write("April 2019 – September 2019")
     st.write(
         """
-    - ► Built data models and maps to generate meaningful insights from customer data, boosting successful sales eﬀorts by 12%
-    - ► Modeled targets likely to renew, and presented analysis to leadership, which led to a YoY revenue increase of $300K
-    - ► Compiled, studied, and inferred large amounts of data, modeling information to drive auto policy pricing
+    - ► Implemented consistent borrower communication, reducing document retrieval time and streamlining the loan application process for enhanced customer satisfaction.
+    - ► Analyzed 100+ complex loan transactions each month, reviewing and uploading loan documentation for accuracy and compliance.
     """
     )
 
 # --- JOB 3
     st.write('\n')
-    st.write("🚧", "**Data Analyst | Chegg**")
-    st.write("04/2015 - 01/2018")
+    st.subheader("Virtual Work")
+    st.write("---")
+    st.write("Tata Consultancy Services (TCS), Data Visualization: Empowering Business with Effective Insights, The Forage")
+    st.write("December 2023")
     st.write(
         """
-    - ► Devised KPIs using SQL across company website in collaboration with cross-functional teams to achieve a 120% jump in organic traﬃc
-    - ► Analyzed, documented, and reported user survey results to improve customer communication processes by 18%
-    - ► Collaborated with analyst team to oversee end-to-end process surrounding customers' return data
+    - ► Collaborated in a team of 4 to perform EDA on Sales data to anticipate the needs of C-level executives using Python.
+    - ► Generated dashboards using Python and Tableau; helping C-level executives to reduce costs and increase profitability.
+    - ► Created and delivered a presentation to TCS data analytics member and made recommendations based on my findings
     """
     )
 
-
-# --- Projects & Accomplishments ---
-    st.write('\n')
-    st.subheader("Projects & Accomplishments")
-    st.write("---")
-    for project, link in PROJECTS.items():
-        st.write(f"[{project}]({link})")
-
-    # ... (rest of your sections)
 
 if __name__ == "__main__":
     resume()
